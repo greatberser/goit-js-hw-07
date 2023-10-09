@@ -34,11 +34,3 @@ const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: 250,
 });
-
-gallery.addEventListener('click', (event) => {
-    event.preventDefault();
-    if (event.target.nodeName === 'IMG') {
-        const index = galleryItems.findIndex((item) => item.preview === event.target.src);
-        lightbox.open(index);
-    }
-});
